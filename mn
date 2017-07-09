@@ -222,7 +222,7 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH" "Trial" "Perbarui User" "Semua User" "Hapus User" "Monitor User Login" "On Kill Multi Login" "Off Kill Multi Login" "User Belum Exp" "User Sudah Exp" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Users" "bench-network" "Ram Status" "Bersihkan cache ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Lihat Lokasi User" "Quit")
+options=("Buat Akun SSH" "Generate Akun SSH" "Renew Akun SSH" "Daftar Akun SSH" "Hapus Akun SSH" "Cek Login Akun SSH" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH Aktif" "Daftar Akun SSH Expired" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Users" "bench-network" "Ram Status" "Bersihkan cache ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Lihat Lokasi User" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -246,7 +246,20 @@ do
        create_user
 	    break
             ;;
-	"Trial")
+	"Generate Akun SSH")
+	clear
+        echo -e "+============================================================================+" | lolcat
+        echo -e "+                                                                            +" | lolcat
+        echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
+        echo -e "+                             <<= Contact Person =>>                         +" | lolcat
+        echo -e "+                        BBM :D69F79CA | WA :082228644803                    +" | lolcat
+        echo -e "+                                                                            +" | lolcat
+        echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
+        echo -e "------------------------------------------------------------------------------" | lolcat
+        echo -e "                     ----------- Generate Akun SSH ----------                 " | lolcat
+        echo -e "------------------------------------------------------------------------------" | lolcat
+        echo -e " "
+        echo -e " "	
 	uname=trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 	masaaktif="1"
 	pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
@@ -254,7 +267,7 @@ do
 	create_user
 	break
 	;;
-        "Perbarui User")
+        "Renew Akun SSH")
 	   clear
 	    echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
@@ -273,7 +286,7 @@ do
             renew_user | boxes -d dog | lolcat
             break
             ;;
-	 "Semua User")
+	 "Daftar Akun SSH")
 	    clear	  
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
@@ -290,7 +303,7 @@ do
 	    user-list
 	    break
 	    ;;
-        "Hapus User")
+        "Hapus Akun SSH")
 	     clear
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
@@ -311,7 +324,7 @@ do
             delete_user
 	    break
             ;;
-	  "Monitor User Login")
+	  "Cek Login Akun SSH")
 	  clear
 	  echo -e "+============================================================================+" | lolcat
 	  echo -e "+                                                                            +" | lolcat
@@ -356,7 +369,7 @@ do
 	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS!!!" | boxes -d boy | lolcat
 	break
 	;;
-		"User Belum Exp")
+		"Daftar Akun SSH Aktif")
 		        clear
 		        echo -e "+============================================================================+" | lolcat
 	                echo -e "+                                                                            +" | lolcat
@@ -375,7 +388,7 @@ do
 			echo -e "================================" | lolcat
 			break
 			;;
-		"User Sudah Exp")
+		"Daftar Akun SSH Expired")
 		        clear
 		        echo -e "+============================================================================+" | lolcat
 	                echo -e "+                                                                            +" | lolcat
@@ -389,16 +402,16 @@ do
                         echo -e "------------------------------------------------------------------------------" | lolcat
                         echo -e " "
                         echo -e " "
-			echo -e "================================" | lolcat
+			echo -e "=================================" | lolcat
 			expired_users | lolcat
-			echo -e "================================" | lolcat
+			echo -e "=================================" | lolcat
 			break
 			;;		
 		"Restart Server")
 			reboot
 			break
 			;;
-		"Ganti Password User")
+		"Ganti Password Akun SSH")
 		  clear
 	          echo -e "+============================================================================+" | lolcat
 	          echo -e "+                                                                            +" | lolcat
