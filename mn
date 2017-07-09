@@ -222,11 +222,11 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH" "Generate Akun SSH" "Renew Akun SSH" "Daftar Akun SSH" "Hapus Akun SSH" "Cek Login Akun SSH" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH Aktif" "Daftar Akun SSH Expired" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Users" "bench-network" "Ram Status" "Bersihkan cache ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Lihat Lokasi User" "Quit")
+options=("Buat Akun SSH" "Generate Akun SSH" "Renew Akun SSH" "Daftar Akun SSH" "Hapus Akun SSH" "Cek Login Akun SSH" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH Aktif" "Daftar Akun SSH Expired" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Users" "bench-network" "Ram Status" "Bersihkan cache ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Lihat Lokasi User" "Quit" | lolcat)
 select opt in "${options[@]}"
 do
     case $opt in
-        "Buat Akun SSH") | lolcat 
+        "Buat Akun SSH")
 	clear
        echo -e "+============================================================================+" | lolcat
        echo -e "+                                                                            +" | lolcat
