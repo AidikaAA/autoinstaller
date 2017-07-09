@@ -226,7 +226,7 @@ options=("Buat Akun SSH" "Generate Akun SSH" "Renew Akun SSH" "Daftar Akun SSH" 
 select opt in "${options[@]}"
 do
     case $opt in
-        "Buat Akun SSH") 
+        "Buat Akun SSH") | lolcat 
 	clear
        echo -e "+============================================================================+" | lolcat
        echo -e "+                                                                            +" | lolcat
