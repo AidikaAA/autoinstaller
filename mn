@@ -22,7 +22,8 @@ echo -e "  Password: $pass          " | lolcat
 echo -e "  Port Dropbear: 443,80,22507,2000,2017  " | lolcat
 echo -e "  Port OpenSSH: 22,90                    " | lolcat
 echo -e "  Port Squid: 8080,3128 " | lolcat
-echo -e "  Config OVPN: $myip:81/1194-client.ovpn " | lolcat
+echo -e "  Config OVPN: " | lolcat
+echo -e "  http://$myip:81/1194-client.ovpn " | lolcat
 echo -e "-----------------------------------------" | lolcat
 echo -e "    Masa Aktif Sampai: $exp " | lolcat
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
