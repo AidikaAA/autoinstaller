@@ -5,6 +5,19 @@
 # ==========================
 # 
 
+          clear
+	  echo -e "+============================================================================+" | lolcat
+	  echo -e "+                                                                            +" | lolcat
+          echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
+          echo -e "+                             <<= Contact Person =>>                         +" | lolcat
+          echo -e "+                        BBM :D69F79CA | WA :082228644803                    +" | lolcat
+          echo -e "+                                                                            +" | lolcat
+          echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
+          echo -e "------------------------------------------------------------------------------" | lolcat
+          echo -e ">>>>>>>>>>                      Cek Login Akun SSH                  <<<<<<<<<<" | lolcat
+          echo -e "------------------------------------------------------------------------------" | lolcat
+          echo -e " "
+          echo -e " "
 echo ""| lolcat
 echo "|   Tgl-Jam    | PID   |   User Name  |      Dari IP      |"| boxes -d peek | lolcat
 echo "-------------------------------------------------------------"| lolcat
