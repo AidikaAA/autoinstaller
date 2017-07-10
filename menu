@@ -227,11 +227,11 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH/OVPN" "Generate Akun SSH/OVPN" "Renew Akun SSH/OVPN" "Daftar Akun SSH/OVPN" "Hapus Akun SSH/OVPN" "Cek Login Akun SSH" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif" "Daftar Akun SSH/OVPN Expired" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Server" "Benchmark" "Cek Penggunaan Memory Server" "Bersihkan Cache Ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Ubah Banner Login" "Lihat Lokasi User" "Quit")
+options=("Buat Akun SSH/OVPN (user-add)" "Generate Akun SSH/OVPN (trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Buat Akun SSH/OVPN")
+        "Buat Akun SSH/OVPN (user-add)")
 	clear
        echo -e " "
        echo -e " "
@@ -253,7 +253,7 @@ do
        create_user
 	    break
             ;;
-	"Generate Akun SSH/OVPN")
+	"Generate Akun SSH/OVPN(trial)")
 	clear
 	echo -e " "
         echo -e " "
@@ -276,7 +276,7 @@ do
 	create_user
 	break
 	;;
-        "Renew Akun SSH/OVPN")
+        "Renew Akun SSH/OVPN (renew)")
 	   clear
 	    echo -e " "
             echo -e " "
@@ -297,7 +297,7 @@ do
             renew_user | boxes -d dog | lolcat
             break
             ;;
-	 "Daftar Akun SSH/OVPN")
+	 "Daftar Akun SSH/OVPN (user-list)")
 	    clear
 	    echo -e " "
             echo -e " "
@@ -316,7 +316,7 @@ do
 	    user-list
 	    break
 	    ;;
-        "Hapus Akun SSH/OVPN")
+        "Hapus Akun SSH/OVPN (user-del)")
 	     clear
 	    echo -e " "
             echo -e " "
@@ -339,7 +339,7 @@ do
             delete_user
 	    break
             ;;
-	  "Cek Login Akun SSH")
+	  "Cek Login Akun SSH (user-log)")
 	  clear
 	  echo -e " "
           echo -e " "
@@ -386,7 +386,7 @@ do
 	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS!!!" | boxes -d boy | lolcat
 	break
 	;;
-		"Daftar Akun SSH/OVPN Aktif")
+		"Daftar Akun SSH/OVPN Aktif (user-active)")
 		        clear
 			echo -e " "
                         echo -e " "
@@ -407,7 +407,7 @@ do
 			echo -e "================================" | lolcat
 			break
 			;;
-		"Daftar Akun SSH/OVPN Expired")
+		"Daftar Akun SSH/OVPN Expired (user-exp)")
 		        clear
 			echo -e " "
       		        echo -e " "
@@ -428,7 +428,7 @@ do
 			echo -e "=================================" | lolcat
 			break
 			;;		
-		"Restart Server")
+		"Restart Server (reboot)")
 			reboot
 			break
 			;;
@@ -454,26 +454,26 @@ do
 		echo "Sukses gan!!! Password $uname user ente sudah di ganti..."| boxes -d peek | lolcat
 		break
 		;;
-		"Ganti Password VPS")
+		"Ganti Password VPS (passwd)")
 		read -p "Silahkan isi password baru untuk VPS anda: " pass	
 		echo "root:$pass" | chpasswd
 		echo "Ganti PW VPS ente sukses gan !!!"| boxes -d boy | lolcat
 			break
 			;;
-		       "Cek Penggunaan Memory Server")
+		       "Cek Penggunaan data (used-bandwith)")
 			      used_data | boxes -d boy | lolcat
  			      break
 			      ;;
-		       "Bechmark")
+		       "Bechmark (bencmark)")
 			      bench-network2 | lolcat
 			      break
 			      ;;
-		       "Ram Status")
+		       "Cek Penggunaan Memory Server (cek-mem)")
 			      free -h | grep -v + > /tmp/ramcache
 			      cat /tmp/ramcache | grep -v "Swap"
 			      break
 			      ;;
-		       "Bersihkan Cache Ram")
+		       "Bersihkan Cache Ram (clean-cache)")
 	                      echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 			      echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d spring | lolcat
 		              break
@@ -520,11 +520,11 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
             echo "Squid3 Updated Port: $PORT"| lolcat
 			break
 			;;
-			"Speedtest")
+			"Speedtest (speedtest)")
 			python speedtest.py --share | lolcat
 			break		
 			;;
-                       "Ubah Banner Login")
+                       "Ubah Banner Login (banner)")
 	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan Enter)
 	2. Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | boxes -d boy | lolcat
 	read -p "Tekan ENTER untuk melanjutkan........................ " | lolcat
