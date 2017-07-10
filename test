@@ -232,8 +232,6 @@ do
     case $opt in
         "Buat Akun SSH/OVPN (user-add)")
 	clear
-       echo -e " "
-       echo -e " "
        echo -e "+============================================================================+" | lolcat
        echo -e "+                                                                            +" | lolcat
        echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -250,8 +248,8 @@ do
        read -p "Enter password: " pass
        read -p "Kadaluarsa (Berapa Hari): " masaaktif      
        create_user
-	    break
-            ;;
+       break
+       ;;
 	"Generate Akun SSH/OVPN(trial)")
 	clear
 	echo -e " "
