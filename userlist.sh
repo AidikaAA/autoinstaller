@@ -46,7 +46,7 @@ JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)
 done < /etc/passwd
 echo "--------------------------------------------------"| lolcat
 echo " OFFLINE : $OFF     ONLINE : $ON     TOTAL USER : $JUMLAH "| lolcat
-echo "--------------------------------------------------"| lolcat
-echo -e "----------------------------------------------" | lolcat 
-echo -e ">>>>>         Modified By DikaNET        <<<<<" | lolcat
-echo -e "----------------------------------------------" | lolcat
+echo    "--------------------------------------------------"| lolcat
+echo -e "-------------------------------------------------" | lolcat 
+echo -e ">>>>>          Modified By DikaNET          <<<<<" | lolcat
+echo -e "-------------------------------------------------" | lolcat
