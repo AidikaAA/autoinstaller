@@ -5,9 +5,7 @@
 
 
 
-            clear
-	          echo -e " "
-            echo -e " "
+            clear	         
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
             echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
