@@ -21,8 +21,8 @@
             echo -e "-------------------------------------------------------------------------------" | lolcat
             echo -e " "
             echo -e " "
-            read -p "Enter username yg di perbarui: " uname
-            echo "Kadaluarsa User: $uname Di Perbarui Sampai: $expdate"| lolcat;
+            read -p "Enter username yg di perbarui: " uname           
             read -p "Aktif sampai tanggal Thn-Bln-Hr(YYYY-MM-DD): " expdate
             usermod -e $expdate $uname
+	    echo "Kadaluarsa User: $uname Di Perbarui Sampai: $expdate"| lolcat;
             
