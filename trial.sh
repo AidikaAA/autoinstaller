@@ -23,11 +23,6 @@
 	uname=trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 	masaaktif="1"
 	pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
-	clear
-	create_user
-	break
-	;;
-	
 	useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $uname
 exp="$(chage -l $uname | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$pass\n$pass\n"|passwd $uname &> /dev/null
