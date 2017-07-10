@@ -227,11 +227,11 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH" "Generate Akun SSH" "Renew Akun SSH" "Daftar Akun SSH" "Hapus Akun SSH" "Cek Login Akun SSH" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH Aktif" "Daftar Akun SSH Expired" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Users" "bench-network" "Ram Status" "Bersihkan cache ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Edit Banner Login" "Lihat Lokasi User" "Quit")
+options=("Buat Akun SSH/OVPN" "Generate Akun SSH/OVPN" "Renew Akun SSH/OVPN" "Daftar Akun SSH/OVPN" "Hapus Akun SSH/OVPN" "Cek Login Akun SSH" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif" "Daftar Akun SSH/OVPN Expired" "Restart Server" "Ganti Password User" "Ganti Password VPS" "Used Data By Server" "Benchmark" "Cek Penggunaan Memory Server" "Bersihkan Cache Ram" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest" "Ubah Banner Login" "Lihat Lokasi User" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Buat Akun SSH")
+        "Buat Akun SSH/OVPN")
 	clear
        echo -e "+============================================================================+" | lolcat
        echo -e "+                                                                            +" | lolcat
@@ -241,7 +241,7 @@ do
        echo -e "+                                                                            +" | lolcat
        echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
        echo -e "------------------------------------------------------------------------------" | lolcat
-       echo -e "                         ----------- Buat Akun SSH ----------                 " | lolcat
+       echo -e ">>>>>>>>>>                     Buat Akun SSH/OVPN                 <<<<<<<<<<" | lolcat
        echo -e "------------------------------------------------------------------------------" | lolcat
        echo -e " "
        echo -e " "	
@@ -251,7 +251,7 @@ do
        create_user
 	    break
             ;;
-	"Generate Akun SSH")
+	"Generate Akun SSH/OVPN")
 	clear
         echo -e "+============================================================================+" | lolcat
         echo -e "+                                                                            +" | lolcat
@@ -261,7 +261,7 @@ do
         echo -e "+                                                                            +" | lolcat
         echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
         echo -e "------------------------------------------------------------------------------" | lolcat
-        echo -e ">>>>>>>>>>                      Generate Akun SSH                   <<<<<<<<<<" | lolcat
+        echo -e ">>>>>>>>>>                    Generate Akun SSH/OVPN                <<<<<<<<<<" | lolcat
         echo -e "------------------------------------------------------------------------------" | lolcat
         echo -e " "
         echo -e " "
@@ -272,7 +272,7 @@ do
 	create_user
 	break
 	;;
-        "Renew Akun SSH")
+        "Renew Akun SSH/OVPN")
 	   clear
 	    echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
@@ -282,7 +282,7 @@ do
             echo -e "+                                                                            +" | lolcat
             echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
             echo -e "-------------------------------------------------------------------------------" | lolcat
-            echo -e ">>>>>>>>>>                        Renew Akun SSH                     <<<<<<<<<<" | lolcat
+            echo -e ">>>>>>>>>>                        Renew Akun SSH/OVPN                <<<<<<<<<<" | lolcat
             echo -e "-------------------------------------------------------------------------------" | lolcat
             echo -e " "
             echo -e " "
@@ -291,7 +291,7 @@ do
             renew_user | boxes -d dog | lolcat
             break
             ;;
-	 "Daftar Akun SSH")
+	 "Daftar Akun SSH/OVPN")
 	    clear	  
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
@@ -301,14 +301,14 @@ do
             echo -e "+                                                                            +" | lolcat
             echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
             echo -e "-------------------------------------------------------------------------------" | lolcat
-            echo -e ">>>>>>>>>>                       Daftar Akun SSH                     <<<<<<<<<<" | lolcat
+            echo -e ">>>>>>>>>>                       Daftar Akun SSH/OVPN                     <<<<<<<<<<" | lolcat
             echo -e "-------------------------------------------------------------------------------" | lolcat
             echo -e " "
             echo -e " "
 	    user-list
 	    break
 	    ;;
-        "Hapus Akun SSH")
+        "Hapus Akun SSH/OVPN")
 	     clear
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
@@ -318,7 +318,7 @@ do
             echo -e "+                                                                            +" | lolcat
             echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
             echo -e "------------------------------------------------------------------------------" | lolcat
-            echo -e ">>>>>>>>>>                        Hapus Akun SSH                    <<<<<<<<<<" | lolcat
+            echo -e ">>>>>>>>>>                      Hapus Akun SSH/OVPN                 <<<<<<<<<<" | lolcat
             echo -e "------------------------------------------------------------------------------" | lolcat
             echo -e " "
             echo -e " "
@@ -374,7 +374,7 @@ do
 	echo "AUTO KILL LOGIN,SUDAH SAYA MATIKAN BOS!!!" | boxes -d boy | lolcat
 	break
 	;;
-		"Daftar Akun SSH Aktif")
+		"Daftar Akun SSH/OVPN Aktif")
 		        clear
 		        echo -e "+============================================================================+" | lolcat
 	                echo -e "+                                                                            +" | lolcat
@@ -384,7 +384,7 @@ do
                         echo -e "+                                                                            +" | lolcat
                         echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
                         echo -e "------------------------------------------------------------------------------" | lolcat
-                        echo -e ">>>>>>>>>>                     Daftar Akun SSH Aktif                <<<<<<<<<<" | lolcat
+                        echo -e ">>>>>>>>>>                  Daftar Akun SSH/OVPN Aktif              <<<<<<<<<<" | lolcat
                         echo -e "------------------------------------------------------------------------------" | lolcat
                         echo -e " "
                         echo -e " "
@@ -393,7 +393,7 @@ do
 			echo -e "================================" | lolcat
 			break
 			;;
-		"Daftar Akun SSH Expired")
+		"Daftar Akun SSH/OVPN Expired")
 		        clear
 		        echo -e "+============================================================================+" | lolcat
 	                echo -e "+                                                                            +" | lolcat
@@ -403,7 +403,7 @@ do
                         echo -e "+                                                                            +" | lolcat
                         echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
                         echo -e "------------------------------------------------------------------------------" | lolcat
-                        echo -e ">>>>>>>>>>                    Daftar Akun SSH Expired               <<<<<<<<<<" | lolcat
+                        echo -e ">>>>>>>>>>                 Daftar Akun SSH/OVPN Expired             <<<<<<<<<<" | lolcat
                         echo -e "------------------------------------------------------------------------------" | lolcat
                         echo -e " "
                         echo -e " "
@@ -416,7 +416,7 @@ do
 			reboot
 			break
 			;;
-		"Ganti Password Akun SSH")
+		"Ganti Password Akun SSH/OVPN")
 		  clear
 	          echo -e "+============================================================================+" | lolcat
 	          echo -e "+                                                                            +" | lolcat
@@ -426,7 +426,7 @@ do
                   echo -e "+                                                                            +" | lolcat
                   echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
                   echo -e "------------------------------------------------------------------------------" | lolcat
-                  echo -e ">>>>>>>>>>                  Ganti Password Akun SSH                 <<<<<<<<<<" | lolcat
+                  echo -e ">>>>>>>>>>                 Ganti Password Akun SSH/OVPN             <<<<<<<<<<" | lolcat
                   echo -e "------------------------------------------------------------------------------" | lolcat
                   echo -e " "
                   echo -e " "
@@ -442,11 +442,11 @@ do
 		echo "Ganti PW VPS ente sukses gan !!!"| boxes -d boy | lolcat
 			break
 			;;
-		       "Used Data By Users")
+		       "Used Data By Server")
 			      used_data | boxes -d boy | lolcat
  			      break
 			      ;;
-		       "bench-network")
+		       "Bechmark")
 			      bench-network2 | lolcat
 			      break
 			      ;;
@@ -455,7 +455,7 @@ do
 			      cat /tmp/ramcache | grep -v "Swap"
 			      break
 			      ;;
-		       "Bersihkan cache ram")
+		       "Bersihkan Cache Ram")
 	                      echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 			      echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d spring | lolcat
 		              break
@@ -506,7 +506,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 			python speedtest.py --share | lolcat
 			break		
 			;;
-                       "Edit Banner Login")
+                       "Ubah Banner Login")
 	echo -e "1. Simpan text (CTRL + X, lalu ketik Y dan tekan Enter)
 	2. Membatalkan edit text (CTRL + X, lalu ketik N dan tekan Enter)" | boxes -d boy | lolcat
 	read -p "Tekan ENTER untuk melanjutkan........................ " | lolcat
