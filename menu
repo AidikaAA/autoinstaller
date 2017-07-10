@@ -460,7 +460,7 @@ do
 		echo "Ganti PW VPS ente sukses gan !!!"| boxes -d boy | lolcat
 			break
 			;;
-		       "Used Data By Server")
+		       "Cek Penggunaan Memory Server")
 			      used_data | boxes -d boy | lolcat
  			      break
 			      ;;
