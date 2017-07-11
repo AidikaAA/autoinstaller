@@ -508,7 +508,7 @@ break
 		echo "+ Squiid3   : 8080, 3128"| lolcat
 		echo "+ OpenSSH  : 22, 90"| lolcat
 		echo "+ Dropbear : 443, 80, 22507, 1997, 2000, 2017"| lolcat
-		echo "+ OpenVPN  : TCP Port 55 (client config : http://$myip:81/1194-client.ovpn)"| lolcat
+		echo "+ OpenVPN  : client config : http://$myip:81/1194-client.ovpn"| lolcat
 		echo "+ Timezone : Asia/Jakarta"| lolcat
 		echo "+ Fail2Ban : [on]"| lolcat
 		echo "+ Edited by: Dika NET"| lolcat
