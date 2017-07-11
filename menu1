@@ -254,10 +254,22 @@ do
 	break
 	;;
 	"Buat Akun SSH/OVPN trial (trial)")
+	    clear
+	    echo -e "+============================================================================+" | lolcat
+            echo -e "+                                                                            +" | lolcat
+            echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
+            echo -e "+                             <<= Contact Person =>>                         +" | lolcat
+            echo -e "+                        BBM :D69F79CA | WA :082228644803                    +" | lolcat
+            echo -e "+                                                                            +" | lolcat
+            echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
+            echo -e "------------------------------------------------------------------------------" | lolcat
+            echo -e ">>>>>>>>>>                       Renew Akun SSH/OVPN                <<<<<<<<<<" | lolcat
+            echo -e "------------------------------------------------------------------------------" | lolcat
+            echo -e " "
+            echo -e " "
 	uname=trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 	masaaktif="1"
-	pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
-	clear
+	pass=`</dev/urandom tr -dc a-f0-9 | head -c9`	
 	create_user
 	break
 	;;
