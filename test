@@ -227,7 +227,8 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH/OVPN (user-add)" "Generate Akun SSH/OVPN (trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "About" "Info" "Quit" ")select opt in "${options[@]}"
+options=("Buat Akun SSH/OVPN (user-add)" "Generate Akun SSH/OVPN (trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "About" "Info" "Quit")
+select opt in "${options[@]}"
 do
     case $opt in
         "Buat Akun SSH/OVPN (user-add)")
