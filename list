@@ -223,6 +223,17 @@ echo "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+
 echo " "
 echo "                               Informasi Server Anda                            " | lolcat
 echo " IP/Host : $myip " | lolcat
+echo " cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
+	# Reading amount of CPU cores
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	# Reading CPU frequency in MHz
+	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//' )
+	# Reading total memory in MB
+	tram=$( free -m | awk 'NR==2 {print $2}' )
+	# Reading Swap in MB
+	vram=$( free -m | awk 'NR==4 {print $2}' )
+	# Reading system uptime
+	up=$( uptime | awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }' | sed 's/^[ \t]*//;s/[ \t]*$//' )
 echo "================================================================================" | lolcat
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
@@ -241,9 +252,7 @@ do
 	break
 	;;
         "Renew Akun SSH/OVPN (renew)")
-	   clear
-	    echo -e " "
-            echo -e " "
+	   clear	   
 	    echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
             echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -262,9 +271,7 @@ do
             break
             ;;
 	 "Daftar Akun SSH/OVPN (user-list)")
-	    clear
-	    echo -e " "
-            echo -e " "
+	    clear   
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
             echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -281,9 +288,7 @@ do
 	    break
 	    ;;
         "Hapus Akun SSH/OVPN (user-del)")
-	     clear
-	    echo -e " "
-            echo -e " "
+	     clear	   
             echo -e "+============================================================================+" | lolcat
             echo -e "+                                                                            +" | lolcat
             echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -304,9 +309,7 @@ do
 	    break
             ;;
 	  "Cek Login Akun SSH (user-log)")
-	  clear
-	  echo -e " "
-          echo -e " "
+	  clear	  
 	  echo -e "+============================================================================+" | lolcat
 	  echo -e "+                                                                            +" | lolcat
           echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -351,9 +354,7 @@ do
 	break
 	;;
 		"Daftar Akun SSH/OVPN Aktif (user-active)")
-		        clear
-			echo -e " "
-                        echo -e " "
+		        clear	
 		        echo -e "+============================================================================+" | lolcat
 	                echo -e "+                                                                            +" | lolcat
                         echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -372,9 +373,7 @@ do
 			break
 			;;
 		"Daftar Akun SSH/OVPN Expired (user-exp)")
-		        clear
-			echo -e " "
-      		        echo -e " "
+		        clear			
 		        echo -e "+============================================================================+" | lolcat
 	                echo -e "+                                                                            +" | lolcat
                         echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
@@ -397,9 +396,7 @@ do
 			break
 			;;
 		"Ganti Password Akun SSH/OVPN")
-		  clear
-		  echo -e " "
-    	          echo -e " "
+		  clear		  
 	          echo -e "+============================================================================+" | lolcat
 	          echo -e "+                                                                            +" | lolcat
                   echo -e "+                       Script Premium Modified by DikaNET                   +" | lolcat 
