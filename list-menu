@@ -410,7 +410,7 @@ do
 		echo "Ganti PW VPS ente sukses gan !!!"| boxes -d boy | lolcat
 			break
 			;;
-		       "Cek Penggunaan data (used-bandwith)")
+		       " Used Data By Server (used-bandwith)")
 			      used_data | boxes -d boy | lolcat
  			      break
 			      ;;
