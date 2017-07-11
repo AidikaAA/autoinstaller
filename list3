@@ -227,7 +227,7 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH/OVPN (user-add)" "Generate Akun SSH/OVPN (trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "Quit")
+options=("Buat Akun SSH/OVPN (user-add)" "Buat Akun SSH/OVPN trial(trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -241,7 +241,7 @@ do
             echo -e "+                                                                            +" | lolcat
             echo -e "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+" | lolcat
             echo -e "------------------------------------------------------------------------------" | lolcat
-            echo -e ">>>>>>>>>>                    Buat  Akun SSH/OVPN                   <<<<<<<<<<" | lolcat
+            echo -e ">>>>>>>>>>                     Buat Akun SSH/OVPN                   <<<<<<<<<<" | lolcat
             echo -e "------------------------------------------------------------------------------" | lolcat
             echo -e " "
             echo -e " "
@@ -250,6 +250,14 @@ do
          read -p "Kadaluarsa (Berapa Hari): " masaaktif
          clear
 	 clear
+	create_user
+	break
+	;;
+	"Buat Akun SSH/OVPN trial (trial)")
+	uname=trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
+	masaaktif="1"
+	pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
+	clear
 	create_user
 	break
 	;;
@@ -427,7 +435,7 @@ do
 			      used_data | boxes -d boy | lolcat
  			      break
 			      ;;
-		       "Benchmark (bencmark)")
+		       "Benchmark (benchmark)")
 			      bench-network2 | lolcat
 			      break
 			      ;;
