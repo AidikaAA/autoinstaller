@@ -227,7 +227,7 @@ echo "==========================================================================
 echo "                              ------ Menu Premium ------                        " | lolcat
 echo "================================================================================" | lolcat
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat Akun SSH/OVPN (user-add)" "Generate Akun SSH/OVPN (trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "About" "Info" "Quit")
+options=("Buat Akun SSH/OVPN (user-add)" "Generate Akun SSH/OVPN (trial)" "Renew Akun SSH/OVPN (renew)" "Daftar Akun SSH/OVPN (user-list)" "Hapus Akun SSH/OVPN (user-del)" "Cek Login Akun SSH (user-log)" "On Kill Multi Login" "Off Kill Multi Login" "Daftar Akun SSH/OVPN Aktif(user-active)" "Daftar Akun SSH/OVPN Expired (user-exp)" "Restart Server (reboot)" "Ganti Password User" "Ganti Password VPS (passwd)" "Used Data By Server (used-bandwith)" "Benchmark (benchmark)" "Cek Penggunaan Memory Server (cek-mem)" "Bersihkan Cache Ram (clean-cache)" "Ganti Port OpenVPN" "Ganti Port Dropbear" "Ganti Port Openssh" "Ganti Port Squid3" "Speedtest (speedtest)" "Ubah Banner Login (banner)" "Lihat Lokasi User" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -498,34 +498,6 @@ read -p "Ketik Salah Satu Alamat IP User: " userip
 curl ipinfo.io/$userip
 break
 ;;
-		"About")
-		clear
-		echo "========================================" | lolcat  
-		echo "  SCRIPT PREMIUM Modified by DikaNET" | lolcat 
-		echo =========================================" | lolcat
-		echo "  Service Installed : " | lolcat
-		echo "+ Webmin   : http://$myip:10000/"| lolcat
-		echo "+ Squiid3   : 8080, 3128"| lolcat
-		echo "+ OpenSSH  : 22, 90"| lolcat
-		echo "+ Dropbear : 443, 80, 22507, 1997, 2000, 2017"| lolcat
-		echo "+ OpenVPN  : client config : http://$myip:81/1194-client.ovpn"| lolcat
-		echo "+ Timezone : Asia/Jakarta"| lolcat
-		echo "+ Fail2Ban : [on]"| lolcat
-		echo "+ Edited by: Dika NET"| lolcat
-		echo "+ Telpon   : 082228644803"| lolcat  
-		echo "+ WA       : 082228644803 "| lolcat
-		echo " "
-		echo "Auto kill Multy Login Maximal Login 2"  | lolcat
-		echo "Auto Install Virtual Ram 1 gb"| lolcat
-		echo "Tambahan Script: Otomatis Reboot 24 Jam sekali" | lolcat
-		echo "----------------------------------------"| lolcat
-		break
-		;;
-		"Info")
-		clear
-		screenfetch
-		break
-		;;
 		"Quit")
 		
 		break
